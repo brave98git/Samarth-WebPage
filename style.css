@@ -1,0 +1,351 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+}
+
+/* Slides */
+.slide {
+  padding: 5vh 5vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide1 {
+  background-color: #cde0e6;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide2 {
+  background-color: #b8cfce;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide3 {
+  background-color: #526d82;
+  color: #fff;
+}
+
+.slide4 {
+  background-color: #27374d;
+  color: #fff;
+}
+
+/* Text Styling */
+.name {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(2.5rem, 5vw, 4em);
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#ab {
+  font-size: clamp(1.2rem, 3vw, 2em);
+  margin: 20px 0;
+  font-weight: 600;
+  word-spacing: clamp(3px, 1vw, 10px);
+}
+
+.wel {
+  font-size: clamp(1rem, 2.5vw, 1.8em);
+  margin: 20px 0;
+  max-width: 90%;
+}
+
+.contact {
+  color: #27374d;
+  text-decoration: underline;
+}
+
+/* Images */
+.pine1,
+.pine2,
+.birds,
+#arrow {
+  position: absolute;
+  opacity: 0.9;
+  max-width: 100%;
+  height: auto;
+}
+
+.pine1,
+.pine2 {
+  width: clamp(100px, 25vw, 250px);
+  bottom: 0;
+}
+
+.pine1 {
+  right: 0;
+}
+
+.pine2 {
+  left: 0;
+}
+
+.birds {
+  top: 0;
+  right: 10%;
+  width: clamp(200px, 60vw, 615px);
+  z-index: 0;
+}
+
+.github-thread {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%);
+  transform-origin: top center;
+  width: 2px;
+  height: 300px;
+  background-color: #333;
+  z-index: 5;
+  animation: swing 8s ease-in-out infinite;
+}
+
+.github-btn {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background-color: #333;
+  color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.github-btn:hover {
+  background-color: #015f27;
+}
+
+/* Keyframe for swing animation */
+@keyframes swing{
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+
+/* Slide 2 Content */
+.slide2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+.slide2-content img.circular-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.slide2-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5em);
+  margin-top: 20px;
+}
+
+.slide2-content p {
+  font-size: clamp(1rem, 2.5vw, 1.5em);
+  margin-top: 10px;
+  max-width: 80%;
+}
+
+.clouds-container {
+  position: absolute;
+  top: -100px;
+  left: -152px;
+  width: 100%;
+  height: 100%;
+}
+
+.clouds {
+  position: absolute;
+  max-width: 150px;
+  max-height: 140px;
+}
+
+#cloud1 {
+  left: 250px;
+  bottom: 300px;
+}
+
+#cloud2 {
+  left: 500px;
+  bottom: 200px;
+}
+
+#cloud3 {
+  left: 800px;
+  bottom: 100px;
+  top: -36px;
+}
+#cloud4 {
+  left: 1000px;
+  bottom: 50px;
+  top: 40px;
+}
+#cloud5 {
+  left: 1200px;
+  bottom: 150px;
+  top: -36px;
+}
+
+.grass-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  display: block;
+}
+
+.grass1 {
+  position: absolute;
+  max-width: 150px;
+  max-height: 140px;
+}
+
+/* Position each grass image along the bottom */
+#grass2 {
+  left: 100px;
+  bottom: 0;
+}
+
+#grass3 {
+  left: 300px;
+  bottom: 0;
+}
+
+#grass4 {
+  left: 500px;
+  bottom: 0;
+}
+
+#grass5 {
+  left: 700px;
+  bottom: 0;
+}
+
+#grass6 {
+  left: 900px;
+  bottom: 0;
+}
+
+#grass7 {
+  left: 1100px;
+  bottom: 0;
+}
+
+#grass8 {
+  left: 1300px;
+  bottom: 0;
+}
+
+
+
+
+
+/*Slide 3 Content */
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .name {
+    font-size: clamp(1.8rem, 4vw, 2.5em);
+  }
+
+  #ab {
+    font-size: clamp(1rem, 2.5vw, 1.5em);
+  }
+
+  .wel {
+    font-size: clamp(0.9rem, 2vw, 1.2em);
+  }
+
+  .pine1,
+  .pine2 {
+    width: clamp(80px, 30vw, 150px);
+  }
+
+  #arrow {
+    margin-right: 300px;
+    width: 250px;
+  }
+
+  .birds {
+    right: 5%;
+    width: clamp(150px, 50vw, 300px);
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: clamp(1.5rem, 5vw, 2em);
+  }
+
+  #ab {
+    font-size: clamp(0.9rem, 2.5vw, 1.2em);
+  }
+
+  .wel {
+    font-size: clamp(0.8rem, 2vw, 1em);
+  }
+
+  .pine1,
+  .pine2 {
+    width: clamp(60px, 35vw, 100px);
+  }
+
+  #arrow {
+    margin-right: 100px;
+    width: 200px;
+  }
+
+  .slide2-content img.circular-image {
+    width: 120px;
+    height: 120px;
+  }
+  .slide {
+    padding: 5vh 5vw;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
