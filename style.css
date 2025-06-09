@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/*Slide 1*/
+.hero {
+  position: relative;
+  height: 100vh;
+  background-color: #3674b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.tree {
+  position: absolute;
+  bottom: -10px;
+  height: 400px;
+}
+
+.tree.left {
+  left: 0;
+}
+
+.tree.right {
+  right: 0;
+}
+
+.birds {
+  position: absolute;
+  top: 0;
+  right: 130px;
+  width: 43vw;
+  height: 380px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.github-thread {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-10%);
+  transform-origin: top center;
+  width: 2px;
+  height: clamp(200px, 30vh, 300px);
+  background-color: #333;
+  z-index: 5;
+  animation: swing 8s ease-in-out infinite;
+}
+
+.github-btn {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: clamp(6px, 2vw, 8px) clamp(8px, 3vw, 12px);
+  background-color: #333;
+  color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: clamp(14px, 4vw, 20px);
+  font-weight: bold;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.github-btn:hover {
+  background-color: #015f27;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.intro h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Pacifico", cursive;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.intro a {
+  color: #ef9090;
+  text-decoration: underline;
+}
+
+/*Slide 2*/
+.about {
+  position: relative;
+  height: 100vh;
+  background-color: #3674b5;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.about h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.about a {
+  color: #ef9090;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 180px;
+  border-radius: 30%;
+  margin-bottom: 20px;
+  border: #ffffff 2px solid;
+  box-shadow: 0 4px 8px rgb(0, 153, 255);
+}
+
+
+.clouds {
+  position: absolute;
+  width: 94vw;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 15px;
+}
+
+.cloud {
+  width: 100px;
+  height: auto;
+  opacity: 1.5;
+  position: relative;
+}
+
+.cloud:nth-child(odd) {
+  top: -20px;
+}
+
+.cloud:nth-child(even) {
+  top: 20px;
+}
+
+.cloud:nth-child(1) {
+  width: 58px;
+  height: auto;
+}
+
+.cloud:nth-child(2) {
+  width: 120px;
+  height: auto;
+}
+
+.cloud:nth-child(3) {
+  width: 90px;
+  height: auto;
+}
+
+.cloud:nth-child(4) {
+  width: 130px;
+  height: auto;
+}
+
+.cloud:nth-child(5) {
+  width: 110px;
+  height: auto;
+}
+
+.cloud:nth-child(6) {
+  width: 95px;
+  height: auto;
+}
+
+.cloud:nth-child(7) {
+  width: 140px;
+  height: auto;
+}
+
+.cloud:nth-child(8) {
+  width: 105px;
+  height: auto;
+}
+
+.cloud:nth-child(9) {
+  width: 125px;
+  height: auto;
+}
+
+.cloud:nth-child(10) {
+  width: 96px;
+  height: auto;
+  right: 30px;
+  top: 70px;
+}
+
+.sl2Tree {
+  position: absolute;
+  width: 400px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cloud {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Slide 3 */
+.work {
+  position: relative;
+  height: 200vh;
+  background-color: #3674b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.blockline {
+  background-color: red;
+  border: #333 2px solid;
+  border-radius: 10px;
+}
+
+
+
+
+
+/*Desktop/Laptop*/
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* .sl2Tree {
+    position: absolute;
+    width: 258px;
+    height: auto;
+  }
+   */
+}
+
+/*Mobiles*/
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.3rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .github-btn {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  .clouds {
+    width: 150vw;
+    height: 150px;
+    top: 60px;
+  }
+
+  .about h2 {
+    position: absolute;
+    font-size: 2.8rem;
+    top: 290px;
+  }
+
+  .about p {
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
+  .tree {
+    position: absolute;
+    bottom: -3px;
+    height: 212px;
+  }
+
+  .profile-pic {
+    position: absolute;
+    top: 200px;
+    width: 5rem;
+    height: 5rem;
+    border: #ffffff 2px solid;
+  }
+  .cloud {
+    width: 89vw;
+    height: 400px;
+    overflow: hidden;
+  }
+  .cloud:nth-child(1) {
+    width: 40px;
+  }
+
+  .cloud:nth-child(2) {
+    width: 60px;
+  }
+  .cloud:nth-child(3) {
+    width: 50px;
+  }
+  .cloud:nth-child(4) {
+    width: 70px;
+  }
+  .cloud:nth-child(5) {
+    width: 65px;
+  }
+  .cloud:nth-child(6) {
+    width: 55px;
+  }
+  .cloud:nth-child(7) {
+    width: 75px;
+  }
+  .cloud:nth-child(8) {
+    width: 60px;
+  }
+  .cloud:nth-child(9) {
+    width: 70px;
+  }
+  .cloud:nth-child(10) {
+    width: 50px;
+    right: 20px;
+    top: 50px;
+  }
+  .sl2Tree {
+    position: absolute;
+    width: 150px;
+    height: auto;
+  }
+  .about-text {
+    width: 90%;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .birds {
+    right: 12px;
+    width: 68%;
+    height: 180px;
+    top: 100px;
+  }
+  .github-thread {
+    left: 15%;
+    width: 1px;
+    height: clamp(230px, 13vh, 248px);
+  }
+  .github-btn {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: clamp(6px, 2vw, 8px) clamp(8px, 3vw, 12px);
+    font-size: clamp(14px, 4vw, 18px);
+  }
+  .work {
+    height: 150vh;
+  }
+}
+
+/*Tablets*/
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .github-btn {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border: #ffffff 6px solid;
+  }
+  .cloud {
+    width: 80px;
+  }
+  .cloud:nth-child(1) {
+    width: 40px;
+  }
+  .cloud:nth-child(2) {
+    width: 60px;
+  }
+  .cloud:nth-child(3) {
+    width: 50px;
+  }
+  .cloud:nth-child(4) {
+    width: 70px;
+  }
+  .cloud:nth-child(5) {
+    width: 65px;
+  }
+  .cloud:nth-child(6) {
+    width: 55px;
+  }
+  .cloud:nth-child(7) {
+    width: 75px;
+  }
+  .cloud:nth-child(8) {
+    width: 60px;
+  }
+  .cloud:nth-child(9) {
+    width: 70px;
+  }
+  .cloud:nth-child(10) {
+    width: 50px;
+    right: 20px;
+    top: 50px;
+  }
+  .sl2Tree {
+    position: absolute;
+    width: 200px;
+    height: auto;
+  }
+  .about-text {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
